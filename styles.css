@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Titan+One&display=swap');
+
+:root {
+    --btn_pad: 10px;
+    --defaultFontFamily: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --width: 100%;
+    --radius: 5px;
+    --darkBlue: #45678f;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--defaultFontFamily);
+    color: black;
+}
+
+.view {
+    justify-content: center;
+    align-content: center;
+    width: --width;
+    padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 100px;
+    background-color: --darkBlue;
+}
+
+.display {
+    padding-left: 50px;
+    justify-content: left;
+    align-content: center;
+    width: --width;
+    background-color: white;
+}
+
+.btn {
+    width: 150px;
+    padding: var(--btn_pad);
+    color: white;
+    background-color: var(--darkBlue);
+    border: none;
+    border-radius: var(--radius);
+}
+
+.btn:hover {
+    background-color: blue;
+    box-shadow: 1px 2px black;
+}
