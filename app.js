@@ -4,6 +4,7 @@ window.onload = function(){
     const url = 'superheroes.php';
     const search = document.getElementById("search");
     const display = document.getElementById("result");
+    const res = "<h2>Avengers Character Search Results</h2>"
     
     search.addEventListener('click', function(e) {
         e.preventDefault();
@@ -13,7 +14,7 @@ window.onload = function(){
         requests.onreadystatechange = function() {
             if(requests.readyState == 4 && requests.status == 200) {
                 data = requests.responseText;
-                display.innerHTML = "<br>"+"<hr>"+data;
+                display.innerHTML = res+"<hr>"+data;
             }
         }
         requests.open('GET', url+"?query="+input, true);

@@ -82,7 +82,7 @@ $query = strtolower(filter_input(INPUT_GET, 'query', FILTER_SANITIZE_STRING));?>
     if ($query == "") :?>
         <ul>
         <?php foreach ($superheroes as $superhero):?>
-        <li><?= $superhero['alias']; ?></li>
+        <li><a href='#'><?= $superhero['alias']; ?></a></li>
         <?php endforeach;?>
         </ul>
         <?php
