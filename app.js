@@ -1,22 +1,22 @@
 window.onload = function(){
     var requests = new XMLHttpRequest();
     var data;
+    const url = 'superheroes.php';
     const search = document.getElementById("search");
-    const display = document.getElementById("disp");
-
-    search.addEventListener('click', function(e){
-        
-        requests.onreadystatechange = function(){
-            if(requests.readyState == 4 && requests.status == "200") {
+    const display = document.getElementById("result");
+    
+    search.addEventListener('click', function(e) {
+        e.preventDefault();
+        var hero_query = document.getElementById("hero").value;
+        var input = ""+hero_query;
+        document.getElementById("hero").value = "";
+        requests.onreadystatechange = function() {
+            if(requests.readyState == 4 && requests.status == 200) {
                 data = requests.responseText;
-                alert(data);
+                display.innerHTML = "<br>"+"<hr>"+data;
             }
         }
-        requests.open('GET', 'superheroes.php', true);
-        requests.send();
-
-        console.log(data);
-        //alert(data);
-        
+        requests.open('GET', url+"?query="+input, true);
+        requests.send(input);
     });
 }
