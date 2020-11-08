@@ -3,6 +3,7 @@ window.onload = function(){
     var data;
     const url = 'superheroes.php';
     const search = document.getElementById("search");
+    const clear = document.getElementById("clear");
     const display = document.getElementById("result");
     const res = "<h2>Avengers Character Search Results</h2>"
     
@@ -20,4 +21,10 @@ window.onload = function(){
         requests.open('GET', url+"?query="+input, true);
         requests.send(input);
     });
+
+    clear.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById("hero").value = "";
+        display.innerHTML = "";
+    })
 }

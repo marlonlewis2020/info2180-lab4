@@ -72,6 +72,18 @@ a:hover {
 }
 
 
+#buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 208px;
+}
+
+
+#avengers {
+    width:208px;
+}
+
+
 .btn {
     width: 150px;
     padding: var(--btn_pad);
