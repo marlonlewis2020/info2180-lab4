@@ -64,10 +64,33 @@ $superheroes = [
 ];
 
 ?>
+<h1>Result</h1><hr>
+<?php
+$hero = filter_var($_GET["hero"],FILTER_SANITIZE_STRING);
+$find = False;
 
+foreach ($superheroes as $superhero):
+    if(strtolower($superhero['name']) == strtolower($hero)|| strtolower($superhero['alias']) == strtolower($hero)){
+        $find = True;
+?>
+        <h3><?= $superhero['alias']; ?></h3>
+        <h4><?= $superhero['name']; ?></h4>
+        <p><?= $superhero['biography']; ?></p>
+<?php
+    } 
+endforeach; 
+if($find==False && !empty($hero)){ 
+?>
+    <p id="error">Superhero not found</p>
 
-<ul>
-<?php foreach ($superheroes as $superhero):?>
-    <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
+<?php } 
+else if($find==False && empty($hero)) {
+?>
+    <ul>
+    <?php foreach ($superheroes as $superhero):
+?>
+        <li><?= $superhero['alias']; ?></li>
+    <?php endforeach;
+} 
+?>
 </ul>
