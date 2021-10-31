@@ -51,6 +51,14 @@ body {
     font-weight: bold;
 }
 
-#form-label {
+#form-label, #result h4 {
     padding-bottom: 20px;;
+}
+
+#result h3, #result h4 {
+    height: 4px;
+}
+
+img {
+    width: 310px;
 }
