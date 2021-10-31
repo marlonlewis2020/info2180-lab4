@@ -1,0 +1,56 @@
+:root {
+    --myRed: rgb(255,43,57);
+    --myBlue: rgb(77, 88, 248);
+    --padVert:10px;
+    --formPad:200px;
+}
+    
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header {
+    background-color: rgb(86, 97, 240);
+    padding-bottom: var(--padVert);
+    padding-top: var(--padVert);
+    text-align: center;
+    
+}
+
+#btn {
+    background-color: rgb(255,43,57);
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+}
+
+.header, #btn {
+    color: white;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.form, #result{
+    background-color: rgb(238, 232, 245);
+    padding-top: 20px;
+    padding-left: var(--formPad);
+    padding-right: var(--formPad);
+    padding-bottom: var(--padVert);
+}
+
+#hero {
+    width: 89%;
+    height: 20px;
+}
+
+#error {
+    color: var(--myRed);
+    font-weight: bold;
+}
+
+#form-label {
+    padding-bottom: 20px;;
+}

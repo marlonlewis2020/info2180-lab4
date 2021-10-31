@@ -81,7 +81,7 @@ foreach ($superheroes as $superhero):
 endforeach; 
 if($find==False && !empty($hero)){ 
 ?>
-    <p id="error">Superhero not found</p>
+    <p id="error">SUPERHERO NOT FOUND</p>
 
 <?php } 
 else if($find==False && empty($hero)) {
