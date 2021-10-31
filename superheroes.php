@@ -65,8 +65,9 @@ $superheroes = [
 
 ?>
 
+
 <ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
+<?php foreach ($superheroes as $superhero):?>
+    <li><?= $superhero['alias']; ?></li>
 <?php endforeach; ?>
 </ul>
