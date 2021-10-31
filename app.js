@@ -8,4 +8,8 @@ window.onload = function(){
             $("#hero").val("");
         })
     })
+
+    
 }
+
+    

@@ -73,7 +73,7 @@ foreach ($superheroes as $superhero):
     if(strtolower($superhero['name']) == strtolower($hero)|| strtolower($superhero['alias']) == strtolower($hero)){
         $find = True;
 ?>
-        <img src="images/avengers/<?= $superhero['alias'];?>.jpg" alt="">
+        <img src="images/avengers/<?= $superhero['alias'];?>.jpg" alt="image of <?= $superhero['alias'];?>">
         <h3><?= strtoupper($superhero['alias']); ?></h3>
         <h4>A.K.A <?= strtoupper($superhero['name']); ?></h4>
         <p><?= $superhero['biography']; ?></p>
@@ -82,15 +82,17 @@ foreach ($superheroes as $superhero):
 endforeach; 
 if($find==False && !empty($hero)){ 
 ?>
-    <p id="error">SUPERHERO NOT FOUND</p>
+    <p id="error">SUPERHERO NOT FOUND</p><br>
+    <img src="images/avengers/avengers.jpg" alt="image of Avengers">
 
 <?php } 
 else if($find==False && empty($hero)) {
 ?>
+    <img src="images/avengers/avengers.jpg" alt="image of Avengers"><br>
     <ul>
     <?php foreach ($superheroes as $superhero):
 ?>
-        <li><?= $superhero['alias']; ?></li>
+        <li class="choice"><a href="superheroes.php?hero=<?= $superhero['alias']; ?>"><?= $superhero['alias']; ?></a></li>
     <?php endforeach;
 } 
 ?>
