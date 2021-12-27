@@ -6,4 +6,12 @@ window.onload = function(){
             $("#hero").val("");
         })
     })
+
+    $(".choice").click(function(e){
+        e.preventDefault();
+        $.get("./superheroes.php?hero="+$(this).val(),function(data){
+            $('#result').html(data);
+            $("#hero").val("");
+        })
+    })
 }

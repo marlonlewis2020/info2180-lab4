@@ -92,7 +92,7 @@ else if($find==False && empty($hero)) {
     <ul>
     <?php foreach ($superheroes as $superhero):
 ?>
-        <li class="choice"><a href="superheroes.php?hero=<?= $superhero['alias']; ?>"><?= $superhero['alias']; ?></a></li>
+        <li class="choice"><a value="superheroes.php?hero=<?= $superhero['alias']; ?>"><?= $superhero['alias']; ?></a></li>
     <?php endforeach;
 } 
 ?>
